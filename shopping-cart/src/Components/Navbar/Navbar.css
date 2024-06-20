@@ -1,0 +1,12 @@
+Link {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+li {
+  font-size: 2rem;
+}
