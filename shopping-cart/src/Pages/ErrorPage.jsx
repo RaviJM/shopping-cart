@@ -1,8 +1,9 @@
 import Navbar from "../Components/Navbar/Navbar";
-function ErrorPage() {
+
+function ErrorPage({ noOfItems, setNoOfItems }) {
   return (
     <div>
-      <Navbar />
+      <Navbar noOfItems={noOfItems} setNoOfItems={setNoOfItems} />
       <div>Oops! The Page does not exist!</div>
     </div>
   );
