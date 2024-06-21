@@ -1,5 +1,10 @@
-Link {
+* {
+  box-sizing: border-box;
+}
+
+.nav-links {
   text-decoration: none;
+  color: black;
 }
 
 ul,
@@ -7,6 +12,47 @@ li {
   list-style-type: none;
 }
 
-li {
+nav {
+  background-color: aliceblue;
+  box-shadow: 0px 0px 3px;
+  margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+}
+
+.cartSVGContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.2rem;
+}
+.cartSVGContainer:hover {
+  box-shadow: 0px 0px 5px inset;
+}
+
+.cartSVGContainer:active {
+  color: black;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links-container {
+  display: flex;
+  border: solid black;
+  border-radius: 0.3rem;
+  /* padding: 0.2rem 1rem; */
+}
+
+.nav-link-container {
   font-size: 2rem;
+  margin: 0.2rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: beige;
 }
