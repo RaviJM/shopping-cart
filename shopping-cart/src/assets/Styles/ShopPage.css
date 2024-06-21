@@ -1,0 +1,17 @@
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem 1rem;
+}
+
+.loading-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.loading-text {
+  font-size: 2rem;
+  color: #333;
+}

@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar/Navbar";
+import "../assets/Styles/ShopPage.css";
 import Product from "../Components/Product/Product";
 import { useState, useEffect } from "react";
 
@@ -23,10 +24,17 @@ function ShopPage({ noOfItems, setNoOfItems, handleAdd }) {
     <div>
       <Navbar noOfItems={noOfItems} setNoOfItems={setNoOfItems} />
 
-      {isLoading && <p>Loading...</p>}
-      {data.map((ele) => (
-        <Product ele={ele} key={ele.id} handleAdd={handleAdd} />
-      ))}
+      {isLoading && (
+        <div className="loading-text-container">
+          <p className="loading-text">Loading...</p>
+        </div>
+      )}
+
+      <div className="products-container">
+        {data.map((ele) => (
+          <Product ele={ele} key={ele.id} handleAdd={handleAdd} />
+        ))}
+      </div>
     </div>
   );
 }
