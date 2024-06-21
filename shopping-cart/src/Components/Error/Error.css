@@ -1,0 +1,14 @@
+.errorMsgContainer {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background: rgb(236, 43, 43);
+  background: linear-gradient(
+    76deg,
+    rgba(236, 43, 43, 1) 0%,
+    rgba(251, 131, 131, 1) 50%,
+    rgba(171, 16, 16, 1) 100%
+  );
+}
