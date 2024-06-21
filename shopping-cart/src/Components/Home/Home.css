@@ -1,0 +1,19 @@
+.home-container {
+  height: 82vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(70, 63, 195);
+  background: rgb(126, 120, 241);
+  background: linear-gradient(
+    90deg,
+    rgba(126, 120, 241, 1) 0%,
+    rgba(131, 131, 251, 1) 46%,
+    rgba(16, 145, 171, 1) 100%
+  );
+}
+
+.center-tagline {
+  font-size: 2rem;
+}
