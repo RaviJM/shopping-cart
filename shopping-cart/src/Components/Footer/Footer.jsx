@@ -7,7 +7,7 @@ function Footer() {
       <p>
         Made with <span className="heart">❤</span> by{" "}
         <Link
-          href="https://github.com/https://github.com/RaviJM"
+          to="https://github.com/RaviJM"
           target="_blank"
           rel="noopener noreferrer"
         >
