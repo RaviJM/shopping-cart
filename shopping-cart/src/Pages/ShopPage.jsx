@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar/Navbar";
-import "../assets/Styles/ShopPage.css";
 import Product from "../Components/Product/Product";
+import Footer from "../Components/Footer/Footer";
+import "../assets/Styles/ShopPage.css";
 import { useState, useEffect } from "react";
 
 function ShopPage({ noOfItems, setNoOfItems, handleAdd }) {
@@ -35,6 +36,7 @@ function ShopPage({ noOfItems, setNoOfItems, handleAdd }) {
           <Product ele={ele} key={ele.id} handleAdd={handleAdd} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

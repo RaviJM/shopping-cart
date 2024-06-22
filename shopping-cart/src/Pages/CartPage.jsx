@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/Styles/CartPage.css";
@@ -177,6 +178,7 @@ function CartPage({ noOfItems, setNoOfItems, cartItems, setCartItems }) {
           </div>
         );
       })}
+      <Footer />
     </div>
   );
 }
