@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  border: solid black;
+  border-radius: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+}
+
+.item-img {
+  border-right: solid;
+  border-radius: 5rem;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.item-img-container {
+  height: 18rem;
+}
+
+.item-info-container {
+  padding-top: 0.5rem;
+}
+
+.item-title-container {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.item-description-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.item-quantity-container {
+  font-size: 1.4rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.item-quantity {
+  font-weight: 800;
+}
+
+.item-price-container {
+  font-size: 1.3rem;
+  font-weight: 600;
+  float: right;
+  padding-right: 2rem;
+}
+
+/* CSS  for remove button*/
+.button-45 {
+  align-items: center;
+  background-color: #ffe7e7;
+  background-position: 0 0;
+  border: 1px solid #fee0e0;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #d33a2c;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 33.4929px;
+  list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg)
+    none;
+  padding: 2px 12px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-underline-offset: 1px;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  word-break: break-word;
+  border-top-right-radius: 4rem;
+}
+
+.button-45:active,
+.button-45:hover,
+.button-45:focus {
+  outline: 0;
+}
+
+.button-45:active {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #ffffff;
+}
+
+.button-45:hover {
+  background-color: #ffe3e3;
+  border-color: #faa4a4;
+}
+
+.button-45:active:hover,
+.button-45:focus:hover,
+.button-45:focus {
+  background-color: #d33a2c;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #ffffff;
+}
+
+.item-remove-button-container {
+  float: right;
+  margin-right: 1rem;
+}
+
+.quantity-button {
+  width: 3rem;
+}
+
+/* CSS for increment & decrement button */
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3eb2fd;
+  background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd, sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 3px 15px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, background-position 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
+}
+
+.review-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
+.total-amount-container {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* CSS for checkout button*/
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  width: 70%;
+  margin-top: 0.35rem;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.empty-cart-info-container {
+  height: 80vh;
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 2rem;
+}
+
+/* CSS */
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 1.2rem;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}

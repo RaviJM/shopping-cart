@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../assets/Styles/CartPage.css";
 
 function CartPage({ noOfItems, setNoOfItems, cartItems, setCartItems }) {
   const [isEmpty, setIsEmpty] = useState(true);
@@ -27,11 +28,6 @@ function CartPage({ noOfItems, setNoOfItems, cartItems, setCartItems }) {
       alert("Checked Out!");
     }
   }
-
-  useEffect(() => {
-    handleCartIsEmpty();
-    evaluateTotalAmount();
-  }, [noOfItems, cartItems]);
 
   // function to increment quantity of a product
   function incrementQuantity(productName) {
@@ -83,52 +79,101 @@ function CartPage({ noOfItems, setNoOfItems, cartItems, setCartItems }) {
     setNoOfItems(noOfItems - deductQuantity);
   }
 
+  useEffect(() => {
+    handleCartIsEmpty();
+    evaluateTotalAmount();
+  }, [noOfItems, cartItems]);
+
   return (
     <div>
       <Navbar noOfItems={noOfItems} setNoOfItems={setNoOfItems} />
-      <div>
-        <p>Total Amount: {totalAmount}</p>
-        {!isEmpty && (
-          <button onClick={() => handleCheckout(totalAmount)}>Checkout</button>
-        )}
+
+      <div className="review-container">
+        <div>
+          <div className="total-amount-container">
+            <p className="total-amount">Total Amount: ${totalAmount}</p>
+          </div>
+
+          {!isEmpty && (
+            <button
+              className="button-27"
+              onClick={() => handleCheckout(totalAmount)}
+            >
+              Checkout
+            </button>
+          )}
+        </div>
       </div>
 
       {isEmpty && (
-        <div>
-          <p>Cart is Empty.</p>
+        <div className="empty-cart-info-container">
+          <p>Cart is Empty</p>
 
           <Link to="/shoppage">
-            <button>Shop Now</button>
+            <button className="button-50">Shop Now</button>
           </Link>
         </div>
       )}
 
       {cartItems.map((item) => {
         return (
-          <div key={item.id}>
-            <img src={item.image}></img>
-            <button onClick={() => removeItem(item.title)}>Remove</button>
-            <p>Title: {item.title}</p>
-            <p>Description: {item.description}</p>
-            <p>Quantity: </p>
-            <div>
-              <button
-                className="decrement-button"
-                onClick={() => decrementQuantity(item.title)}
-              >
-                -
-              </button>
-              <p>{item.quantity}</p>
-              <button
-                className="increment-button"
-                onClick={() => incrementQuantity(item.title)}
-              >
-                +
-              </button>
+          <div className="item" key={item.id}>
+            <div className="item-img-container">
+              <img className="item-img" src={item.image}></img>
             </div>
-            <p>
-              Price: {item.price}*{item.quantity}: {item.price * item.quantity}
-            </p>
+
+            <div className="item-info-container">
+              <div className="item-remove-button-container">
+                <button
+                  className="button-45"
+                  onClick={() => removeItem(item.title)}
+                >
+                  Remove
+                </button>
+              </div>
+
+              <div className="item-title-container">
+                <p>{item.title}</p>
+              </div>
+
+              <div className="item-description-container">
+                <p>
+                  <u>
+                    <b>Description:</b>
+                  </u>
+                  {item.description}
+                </p>
+              </div>
+
+              <div className="item-quantity-container">
+                <p>
+                  <u>
+                    <b>Quantity:</b>
+                  </u>
+                </p>
+                <button
+                  className="decrement-button button-21"
+                  onClick={() => decrementQuantity(item.title)}
+                >
+                  -
+                </button>
+                <p className="item-quantity">{item.quantity}</p>
+                <button
+                  className="increment-button button-21"
+                  onClick={() => incrementQuantity(item.title)}
+                >
+                  +
+                </button>
+              </div>
+
+              <div className="item-price-container">
+                <p>
+                  <u>Price:</u>
+                  {"   "}
+                  {item.quantity} * ${item.price}: ${item.price * item.quantity}
+                </p>
+              </div>
+            </div>
           </div>
         );
       })}
